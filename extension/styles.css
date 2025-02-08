@@ -1,12 +1,12 @@
 /* General Overhaul */
 body {
   font-family: 'Open Sans', sans-serif; /* Highly accessible font */
-  font-size: 22.5px; /* 25% larger font size (18px * 1.25) */
+  font-size: 25px; /* 25% larger font size (18px * 1.25) */
   background-color: #ffffff; /* White background for light mode */
   color: #333333; /* Dark gray text for light mode (better contrast) */
   transition: background-color 0.3s, color 0.3s;
   margin: 0;
-  padding: 0;
+  padding: 80px 0 0; /* Add padding to the top for the navbar */
 }
 
 body.dark-mode {
@@ -85,6 +85,11 @@ body.dark-mode h4 {
   align-items: center; /* Center items vertically */
   transition: background-color 0.3s, transform 0.3s;
   border-radius: 15px; /* Rounded corners for bubbly look */
+  position: fixed; /* Fix navbar at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure navbar is above other content */
 }
 
 .newmenu:hover,
@@ -137,6 +142,7 @@ body.dark-mode #newmenu:hover { /* Override any #newmenu:hover styles in dark mo
   list-style: none;
   margin: 0;
   padding: 0;
+  background: none !important; /* Remove background */
 }
 
 .controls li,
@@ -178,14 +184,19 @@ body.dark-mode #controls a { /* Override any #controls a styles in dark mode */
 }
 
 /* Logout Button */
-.controls a.logout,
-#controls a.logout { /* Override any #controls a.logout styles */
+button.logout { /* Override button class for logout button */
   background-color: #ff4444; /* Red background for logout button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.controls a.logout:hover,
-#controls a.logout:hover { /* Override any #controls a.logout:hover styles */
+button.logout:hover { /* Override button class for logout button hover */
   background-color: #cc0000; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Tables Overhaul */
