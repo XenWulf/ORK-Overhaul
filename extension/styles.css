@@ -1,0 +1,446 @@
+/* General Overhaul */
+body {
+  font-family: 'Open Sans', sans-serif; /* Highly accessible font */
+  font-size: 22.5px; /* 25% larger font size (18px * 1.25) */
+  background-color: #ffffff; /* White background for light mode */
+  color: #333333; /* Dark gray text for light mode (better contrast) */
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode {
+  background-color: #121212; /* Darker background for dark mode */
+  color: #e0e0e0; /* Light gray text for dark mode (better contrast) */
+}
+
+/* Anchor (<a>) Elements */
+a {
+  color: #1a73e8; /* Accessible blue for light mode */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #34a853; /* Accessible green for hover in light mode */
+}
+
+body.dark-mode a {
+  color: #ffffff; /* White text for dark mode */
+}
+
+body.dark-mode a:hover {
+  color: #8ab4f8; /* Light blue for hover in dark mode */
+}
+
+/* Heading Classes */
+h1 {
+  font-size: 2.5em; /* 25% larger */
+  color: #1a73e8; /* Accessible blue for light mode */
+  margin-bottom: 20px;
+}
+
+body.dark-mode h1 {
+  color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+h2 {
+  font-size: 2em; /* 25% larger */
+  color: #1a73e8; /* Accessible blue for light mode */
+  margin-bottom: 15px;
+}
+
+body.dark-mode h2 {
+  color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+h3 {
+  font-size: 1.75em; /* 25% larger */
+  color: #1a73e8; /* Accessible blue for light mode */
+  margin-bottom: 10px;
+}
+
+body.dark-mode h3 {
+  color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+h4 {
+  font-size: 1.5em; /* 25% larger */
+  color: #1a73e8; /* Accessible blue for light mode */
+  margin-bottom: 10px;
+}
+
+body.dark-mode h4 {
+  color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+/* Navbar Overhaul */
+.newmenu,
+#newmenu { /* Override any #newmenu styles */
+  background: rgba(26, 115, 232, 0.3); /* Semi-transparent blue for light mode */
+  padding: 20px 30px; /* Larger padding for a bigger bar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 15px; /* Rounded corners for bubbly look */
+}
+
+.newmenu:hover,
+#newmenu:hover { /* Override any #newmenu:hover styles */
+  background: rgba(26, 115, 232, 0.8); /* Less transparent on hover */
+}
+
+body.dark-mode .newmenu,
+body.dark-mode #newmenu { /* Override any #newmenu styles in dark mode */
+  background: rgba(138, 180, 248, 0.3); /* Semi-transparent light blue for dark mode */
+}
+
+body.dark-mode .newmenu:hover,
+body.dark-mode #newmenu:hover { /* Override any #newmenu:hover styles in dark mode */
+  background: rgba(138, 180, 248, 0.8); /* Less transparent on hover */
+}
+
+/* Navigation Items (navmenu) */
+.navmenu,
+#navmenu { /* Override any #navmenu styles */
+  display: flex;
+  gap: 20px; /* Spacing between items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navmenu a,
+#navmenu a { /* Override any #navmenu a styles */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em; /* Larger font size */
+  padding: 8px 12px;
+  border-radius: 25px; /* Rounded corners for bubbly look */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.navmenu a:hover,
+#navmenu a:hover { /* Override any #navmenu a:hover styles */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Controls (settings) */
+.controls,
+#controls { /* Override any #controls styles */
+  display: flex;
+  gap: 10px; /* Spacing between items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.controls li,
+#controls li { /* Override any #controls li styles */
+  background-color: transparent; /* Transparent background */
+  padding: 8px 12px;
+  border-radius: 25px; /* Rounded corners for bubbly look */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Bubbly outline */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.controls li:hover,
+#controls li:hover { /* Override any #controls li:hover styles */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.controls a,
+#controls a { /* Override any #controls a styles */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em; /* Larger font size */
+  padding: 8px 12px;
+  border-radius: 25px; /* Rounded corners for bubbly look */
+  background: none; /* Remove gradient background */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+body.dark-mode .controls a,
+body.dark-mode #controls a { /* Override any #controls a styles in dark mode */
+  background: none; /* Remove gradient background */
+}
+
+.controls a:hover,
+#controls a:hover { /* Override any #controls a:hover styles */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Logout Button */
+.controls a.logout,
+#controls a.logout { /* Override any #controls a.logout styles */
+  background-color: #ff4444; /* Red background for logout button */
+}
+
+.controls a.logout:hover,
+#controls a.logout:hover { /* Override any #controls a.logout:hover styles */
+  background-color: #cc0000; /* Darker red on hover */
+}
+
+/* Tables Overhaul */
+.information-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: white; /* White background for light mode */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Ensures rounded corners are visible */
+}
+
+body.dark-mode .information-table {
+  background-color: #2d2d2d; /* Dark gray for dark mode */
+  color: #e0e0e0; /* Light gray text for dark mode */
+}
+
+.information-table th,
+.information-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+body.dark-mode .information-table th,
+body.dark-mode .information-table td {
+  border-bottom: 1px solid #444;
+}
+
+.information-table th {
+  background-color: #1a73e8; /* Accessible blue for light mode */
+  color: white;
+  font-size: 1.2em; /* Larger font size for headers */
+}
+
+body.dark-mode .information-table th {
+  background-color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+.information-table tr:hover {
+  background-color: #f1f1f1; /* Light gray for hover in light mode */
+}
+
+body.dark-mode .information-table tr:hover {
+  background-color: #444; /* Darker gray for hover in dark mode */
+}
+
+/* Data Column Styling */
+.data-column {
+  font-weight: bold;
+  color: #1a73e8; /* Accessible blue for light mode */
+}
+
+body.dark-mode .data-column {
+  color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+/* Dark Mode Toggle Switch */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1a73e8; /* Accessible blue for light mode */
+  transition: background-color 0.3s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "☀️"; /* Sun icon for light mode */
+  font-size: 18px;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+body.dark-mode .toggle-slider {
+  background-color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+body.dark-mode .toggle-slider:before {
+  content: "🌙"; /* Moon icon for dark mode */
+  transform: translateX(26px) translateY(-50%);
+}
+
+/* Main Content Overhaul */
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-content h1, .main-content h2, .main-content h3 {
+  color: #1a73e8; /* Accessible blue for light mode */
+}
+
+body.dark-mode .main-content h1,
+body.dark-mode .main-content h2,
+body.dark-mode .main-content h3 {
+  color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+.main-content p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  background-color: #1a73e8; /* Accessible blue for light mode */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #34a853; /* Accessible green for hover in light mode */
+  transform: scale(1.05);
+}
+
+body.dark-mode button {
+  background-color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+body.dark-mode button:hover {
+  background-color: #34a853; /* Accessible green for hover in dark mode */
+}
+
+/* Newmenu and Navmenu - Div, Ul, Li */
+.newmenu div,
+.navmenu div {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between elements */
+}
+
+.newmenu ul,
+.navmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; /* Spacing between list items */
+}
+
+.newmenu li,
+.navmenu li {
+  padding: 8px 12px;
+  border-radius: 25px; /* Rounded corners for bubbly look */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Bubbly outline */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.newmenu li:hover,
+.navmenu li:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+body.dark-mode .newmenu li,
+body.dark-mode .navmenu li {
+  border-color: rgba(255, 255, 255, 0.5); /* Lighter outline for dark mode */
+}
+
+/* Form Container */
+.form-container {
+  width: 100%;
+  margin: 20px 0;
+  background-color: white; /* White background for light mode */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between form elements */
+}
+
+body.dark-mode .form-container {
+  background-color: #2d2d2d; /* Dark gray for dark mode */
+  color: #e0e0e0; /* Light gray text for dark mode */
+}
+
+/* Info Container */
+.info-container {
+  background-color: #f4f4f9; /* Light gray for light mode */
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between elements */
+}
+
+body.dark-mode .info-container {
+  background-color: #444; /* Darker gray for dark mode */
+  color: #e0e0e0; /* Light gray text for dark mode */
+}
+
+/* Form Informational Field */
+.form-informational-field {
+  font-size: 1.1em; /* Slightly larger font size */
+  color: #1a73e8; /* Accessible blue for light mode */
+  margin-bottom: 10px;
+}
+
+body.dark-mode .form-informational-field {
+  color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+/* Checkbox */
+.checkbox {
+  accent-color: #1a73e8; /* Accessible blue for light mode */
+  transform: scale(1.2); /* Slightly larger checkbox */
+  margin-right: 10px;
+}
+
+body.dark-mode .checkbox {
+  accent-color: #8ab4f8; /* Accessible light blue for dark mode */
+}
+
+/* Heraldry Image */
+.heraldry-img {
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.heraldry-img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
