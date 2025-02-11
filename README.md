@@ -1,5 +1,7 @@
 # ORK Overhaul - Chrome Extension
 
+![Icon](/extension/Icon.png)
+
 ## 🚀 Overview
 The ORK Overhaul is a Chrome extension designed to **completely revamp the UI/UX** of [ork.amtgard.com](https://ork.amtgard.com). This extension applies modern design principles, **smooth animations**, and an **interactive dark mode toggle** to enhance the overall experience.
 
