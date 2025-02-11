@@ -38,15 +38,7 @@ This project is licensed under the **MIT License** - feel free to modify and use
 ## 👤 Credits
 Developed by [XenWulf](https://github.com/XenWulf). 🎉
 
-<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('xenwulf', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Tip Me',
-    'floating-chat.donateButton.background-color': '#794bc4',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q81AF96Z)
 
 ---
 Made with ❤️ to enhance the ORK experience!
