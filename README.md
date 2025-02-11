@@ -38,5 +38,7 @@ This project is licensed under the **MIT License** - feel free to modify and use
 ## 👤 Credits
 Developed by [XenWulf](https://github.com/XenWulf). 🎉
 
+https://ko-fi.com/xenwulf
+
 ---
 Made with ❤️ to enhance the ORK experience!
