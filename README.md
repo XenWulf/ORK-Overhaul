@@ -21,6 +21,7 @@ The ORK Overhaul is a Chrome extension designed to **completely revamp the UI/UX
 
 ## 🛠️ Usage
 - **Toggle Dark Mode**: Click the floating button on the top right corner of the page.
+![Mode toggle](/assets/mode-toggle.gif)
 - **Enjoy the new design**: Experience a fully modernized ORK interface with improved usability and aesthetics.
 
 ## 🔧 Development
