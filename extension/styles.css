@@ -150,7 +150,7 @@ body.dark-mode #newmenu:hover { /* Override any #newmenu:hover styles in dark mo
   background-color: transparent; /* Transparent background */
   padding: 8px 12px;
   border-radius: 25px; /* Rounded corners for bubbly look */
-  border: 2px solid rgba(255, 255, 255, 0.3); /* Bubbly outline */
+  /* border: 2px solid rgba(255, 255, 255, 0.3); Bubbly outline */
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -170,6 +170,7 @@ body.dark-mode #newmenu:hover { /* Override any #newmenu:hover styles in dark mo
   border-radius: 25px; /* Rounded corners for bubbly look */
   background: none; /* Remove gradient background */
   transition: background-color 0.3s, transform 0.3s;
+  border-right: none !important;
 }
 
 body.dark-mode .controls a,
@@ -392,11 +393,11 @@ body.dark-mode .navmenu li {
 /* Form Container */
 .form-container {
   width: 100%;
-  margin: 20px 0;
+  /* margin: 5px 0; */
   background-color: white; /* White background for light mode */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 15px; /* Rounded corners */
-  padding: 20px;
+  /* padding: 5px; */
   display: flex;
   flex-direction: column;
   gap: 15px; /* Spacing between form elements */
